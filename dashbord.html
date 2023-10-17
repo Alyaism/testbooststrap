@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c4adbad896.js" crossorigin="anonymous"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <style>
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom:0;
+            left: 0;
+            z-index: 100;
+            padding: 90px 0 0;
+            box-shadow: inset -1px 0 0 rgb(0, 0,0 ,.1);
+        }
+        @media(max-width:768px){
+            .sidebar {
+                top: 10.5rem;
+                padding: 0;
+            }
+        }
+
+.navbar {
+    box-shadow: inset 0 -1px 0 rgb(0, 0,0 ,.1);
+}
+
+
+        @media (min-width: 768px){
+            .navbar {
+                top: 0;
+                position: sticky;
+                z-index: 999;
+            }
+        }
+
+
+        .sidebar .nav-link{
+            color: #333;
+        }
+        .sidebar .nav-link.active {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light p-3 sticky-top">
+        <div class="container-fluid">
+            <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0  justify-content-between">
+                <a href="#" class="navbar-brand">simple dashbord</a>
+                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="col-12 col-md-4 col-lg-2">
+                <input type="text" class="form-control form-control-dark" placeholder="Search" aria-label="Search">
+            </div>
+
+
+
+            <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+                <div class="me-3 mt-1">
+                    <!-- Place this tag where you want the button to render. -->
+                    <a class="github-button" href="https://github.com/buttons/github-buttons" data-icon="octicon-star"
+                        data-size="large" data-show-count="true"
+                        aria-label="Star buttons/github-buttons on GitHub">Star</a>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        name
+                    </button>
+                    <ul class="dropdown-menu dropdown " aria-labelledby="dropdown-menu-button">
+                        <li><a href="#" class="dropdown-item">setting</a></li>
+                        <li><a href="#" class="dropdown-item">Mrassage</a></li>
+                        <li><a href="#" class="dropdown-item">sing out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+    
+    
+        
+            <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse collapse-horizontal" >
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="fa-sharp fa-solid fa-house fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">Dashbord</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="fa-sharp fa-solid fa-file fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">order</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-cart-shopping fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">product</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-users fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">customer</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-chart-simple fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">report</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link ">
+                                <i class="fa-sharp fa-solid fa-layer-group fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">integration</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="btn btn-sm btn-secondary mt-2 ms-3">
+                                <i class="fa-sharp fa-solid fa-book-open fa-lg" style="color: #ff9b0f;"></i>
+                                <span class="me-2">read tutorial</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="btn btn-sm btn-warning  mt-2 ms-3">
+                                <span>⚡</span>
+                                <span class="me-2">Volt Dashbord</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="btn btn-sm btn-primary  mt-2 ms-3">
+                                <span class="ms-2">By Alyaism</span>
+                                <span>🧡</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+           
+            </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb bg-dark-subtle">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Overview</li>
+                    </ol>
+                </nav>
+                <h1 class="h2">Dashbord</h1>
+                <p>This is the Homepage Adipisicing laboris excepteur dolore eiusmod laboris Lorem magna aliqua est
+                    labore exercitation.</p>
+                <div class="row my-4">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">customer</h5>
+                            <div class="card-body"></div>
+                            <h5 class="card-title">345k</h5>
+                            <p class="card-text">feb 1 - august 13 , thailand</p>
+                            <p class="card-text text-success">18.2% increase sice last mount</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">Revenue</h5>
+                            <div class="card-body"></div>
+                            <h5 class="card-title">2.4k</h5>
+                            <p class="card-text">feb 1 - august 13 , thailand</p>
+                            <p class="card-text text-success">3.5% increase sice last mount</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">purchases</h5>
+                            <div class="card-body"></div>
+                            <h5 class="card-title">5644k</h5>
+                            <p class="card-text">feb 1 - august 13 , thailand</p>
+                            <p class="card-text text-danger">18.2% decrease sice last mount</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">customer</h5>
+                            <div class="card-body"></div>
+                            <h5 class="card-title">345k</h5>
+                            <p class="card-text">feb 1 - august 13 , thailand</p>
+                            <p class="card-text text-success">18.2% increase sice last mount</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-xl-8 mb-4 m-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">Layest </h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Order</th>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">customer</th>
+                                                <th scope="col">total</th>
+                                                <th scope="col">date</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">12345</th>
+                                                <td>Volt Bootstrap</td>
+                                                <td>Peet</td>
+                                                <td>1500$</td>
+                                                <td>06/07/2003</td>
+                                                <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12345</th>
+                                                <td>Volt Bootstrap</td>
+                                                <td>Peet</td>
+                                                <td>1500$</td>
+                                                <td>06/07/2003</td>
+                                                <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12345</th>
+                                                <td>Volt Bootstrap</td>
+                                                <td>Peet</td>
+                                                <td>1500$</td>
+                                                <td>06/07/2003</td>
+                                                <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12345</th>
+                                                <td>Volt Bootstrap</td>
+                                                <td>Peet</td>
+                                                <td>1500$</td>
+                                                <td>06/07/2003</td>
+                                                <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12345</th>
+                                                <td>Volt Bootstrap</td>
+                                                <td>Peet</td>
+                                                <td>1500$</td>
+                                                <td>06/07/2003</td>
+                                                <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12345</th>
+                                                <td>Volt Bootstrap</td>
+                                                <td>Peet</td>
+                                                <td>1500$</td>
+                                                <td>06/07/2003</td>
+                                                <td><a href="#" class="btn btn-warning">Edit</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="d-grid gap-3">
+                                    <a href="#" class="btn  btn-light">View ALL</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <h5 class="card-header">Traffic last 6</h5>
+                            <div class="card-body">
+                                <div id="traffic-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <footer class="pt-5 d-flex justify-content-between">
+                    <span>Copyright &copy; 2019-2020 <a
+                            href="https://www.facebook.com/profile.php?id=100014867222011&locale=th_TH" target="_blank">
+                            Alyaism</a></span>
+                    <ul class="nav m-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-secondary" aria-current="page">Privacy Polocy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-secondary">Term and condition</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-secondary" >Contract</a>
+                        </li>
+                    </ul>
+                </footer>
+            </main>
+        
+    
+
+
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script>
+        new Chartist.Line('#traffic-chart', {
+            labels: ['jan', 'feb', 'march', 'april', 'may', 'june'],
+            series: [
+                [15000, 2500, 1900, 3400, 5600, 6400]
+            ]
+        }, {
+            low: 10,
+            showArea: true
+        });
+    </script>
+
+</body>
+
+</html>
